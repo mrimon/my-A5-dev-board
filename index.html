@@ -35,7 +35,7 @@
                     <h1 class="text-4xl font-light text-[#00303C]">Dev<span class="font-bold">Board</span></h1>
                 </div>
                 <!-- nav left site -->
-                <div class="flex gap-8 items-center">
+                <div id="nav-left" class="flex gap-8 items-center">
                     <!-- incremental btn -->
                     <div class="flex items-center gap-3 bg-slate-100 p-3 rounded-[32px]">
                         <img class="w-8 h-8" src="assets/checkbox.png" alt="">
@@ -47,16 +47,16 @@
                             <img class="bg-slate-100 p-2 rounded-full" src="assets/theme-btn.png" alt="">
                         </button>
                     </div>
-                    <!-- blog button -->
-                    <div id="blog-btn" class="hidden">
-                        <button class="btn bg-[#3752FD] text-white">Back to Desk</button>
-                    </div>
+                </div>
+                <!-- blog button -->
+                <div id="blog-btn" class="hidden">
+                    <button class="btn bg-[#3752FD] text-white hover:bg-white hover:text-[#3752FD]">Back to Desk</button>
                 </div>
             </nav>
         </header>
 
         <!-- main section -->
-        <main class="grid grid-cols-4 my-5 gap-6">
+        <main id="main" class="grid grid-cols-4 my-5 gap-6">
             <!-- left section  -->
             <section class="bg-white col-span-3 rounded-2xl ">
                 <!-- top section -->
@@ -76,7 +76,7 @@
                         <div id="discover"
                             class="col-span-2 bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] rounded-xl flex items-center">
                             <img class="ml-10" src="assets/board.png" alt="">
-                            <span class="text-white text-2xl font-medium ml-5">Discover Something <br> New Today!</span>
+                            <span class="text-white text-2xl font-medium ml-5 cursor-pointer">Discover Something <br> New Today!</span>
                         </div>
                         <!-- date container -->
                         <div class="col-span-1 bg-slate-100 rounded-xl flex items-center gap-[10px] p-5">
@@ -321,6 +321,7 @@
             </div>
          </section>
     </section>
+    <script src="scripts/utility.js"></script>
     <script src="scripts/main.js"></script>
 </body>
 
