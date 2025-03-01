@@ -82,3 +82,13 @@ let currentDate = document.getElementById('current-date');
 
 // magic button to chande bg
 const magicBtn = document.getElementById('magic-btn')
+magicBtn.addEventListener('click', function(){
+    const letterOfColor = '0123456789ABCDEF';
+    let color = '#';
+    for(let i = 0; i < 6; i++){
+        color = color + letterOfColor[Math.floor(Math.random() * letterOfColor.length)];
+    }
+    const bgBody = document.getElementById('body');
+    bgBody.classList.remove('bg-slate-100')
+    bgBody.classList.add(`bg-[${color}]`);
+})
