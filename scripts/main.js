@@ -52,7 +52,7 @@ for (let btn of completedBtns) {
         // set time on the msg
         const dateNow = new Date();
         const currentTime = dateNow.toLocaleTimeString();
-        msgP.innerText = `You have completed the ${title} at ${currentTime}` //final msg of activity log
+        msgP.innerText = `You have completed the ${title} task at ${currentTime}` //final msg of activity log
         activityToAdd.appendChild(msgP)
         // to disable clicked btn
         event.target.classList.add('opacity-50', 'cursor-not-allowed', 'pointer-events-none', 'bg-gray-300', 'text-black')
