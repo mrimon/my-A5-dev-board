@@ -85,7 +85,7 @@
                             </div>
                             <div>
                                 <!-- date -->
-                                <p id="current-date" class="text-xl font-bold"></p>
+                                <p id="current-date" class="font-bold"></p>
                             </div>
                         </div>
                     </div>
@@ -275,47 +275,66 @@
                 </div>
                 <hr class="border-t-2 border-dashed">
                 <div class="px-6 py-6">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid rem animi soluta sunt, nobis consequatur nihil nam rerum dolorem ut nostrum error beatae commodi porro omnis dignissimos, reprehenderit delectus officia.</p>
+                    <p>There are different ways to select an element in the DOM. such as 
+                        <ul class="list-decimal">
+                            <li>document.getElementsByTagName(TagName) [to get same elements with same Tag name in the DOM]</li>
+                            <li>document.getElementsByClassName(className) [to select those elements which r with the same class name</li>
+                            <li>document.getElementById(id) [to get an spesific element in the DOM]</li>
+                            <li>document.querySelectorAll(className with selector) [to get element with the same class name.] </li>
+                            <li>document.querySelector(id or className) [can get an specific element in the DOM]/li>
+                        </ul>
+                    </p>
                 </div>
             </div>
             <!-- Question-2 -->
             <div class="bg-white rounded-md mb-4">
                 <div class="px-6 py-6">
-                    <h1 class="text-xl text-[#00303c] font-bold">Question-1: What are the different ways to select an element in the DOM?</h1>
+                    <h1 class="text-xl text-[#00303c] font-bold">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h1>
                 </div>
                 <hr class="border-t-2 border-dashed">
                 <div class="px-6 py-6">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid rem animi soluta sunt, nobis consequatur nihil nam rerum dolorem ut nostrum error beatae commodi porro omnis dignissimos, reprehenderit delectus officia.</p>
+                    <p>difference between innerHTML, innerText and textContent are as follows
+                        <ul class="list-decimal">
+                            <li>innerHTML is all the html tags that are inside element including text but innerText is just the text that are inside the element. </li>
+                            <li>innerText is just the text which are visible inside the the element but the textContent returns all text including invisible text .. textContent is more secure and powerful than innerText </li>
+                        </ul>
+                    </p>
                 </div>
             </div>
             <!-- Question-3 -->
             <div class="bg-white rounded-md mb-4">
                 <div class="px-6 py-6">
-                    <h1 class="text-xl text-[#00303c] font-bold">Question-1: What are the different ways to select an element in the DOM?</h1>
+                    <h1 class="text-xl text-[#00303c] font-bold">Question-3: What is event delegation in the DOM?</h1>
                 </div>
                 <hr class="border-t-2 border-dashed">
                 <div class="px-6 py-6">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid rem animi soluta sunt, nobis consequatur nihil nam rerum dolorem ut nostrum error beatae commodi porro omnis dignissimos, reprehenderit delectus officia.</p>
+                    <p>To do an event on some same elements , apply event on their parent instead of applying on elements separately.</p>
                 </div>
             </div>
             <!-- Question-4 -->
             <div class="bg-white rounded-md mb-4">
                 <div class="px-6 py-6">
-                    <h1 class="text-xl text-[#00303c] font-bold">Question-1: What are the different ways to select an element in the DOM?</h1>
+                    <h1 class="text-xl text-[#00303c] font-bold">Question-4: What is event bubbling in the DOM?</h1>
                 </div>
                 <hr class="border-t-2 border-dashed">
                 <div class="px-6 py-6">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid rem animi soluta sunt, nobis consequatur nihil nam rerum dolorem ut nostrum error beatae commodi porro omnis dignissimos, reprehenderit delectus officia.</p>
+                    <p>event bubbling is a mechanism  of DOM. it propagates upwards to root through the DOM tree node</p>
                 </div>
             </div>
             <!-- Question-5 -->
             <div class="bg-white rounded-md mb-4">
                 <div class="px-6 py-6">
-                    <h1 class="text-xl text-[#00303c] font-bold">Question-1: What are the different ways to select an element in the DOM?</h1>
+                    <h1 class="text-xl text-[#00303c] font-bold">Question-5: How do you create, add, and remove elements using JavaScript?</h1>
                 </div>
                 <hr class="border-t-2 border-dashed">
                 <div class="px-6 py-6">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid rem animi soluta sunt, nobis consequatur nihil nam rerum dolorem ut nostrum error beatae commodi porro omnis dignissimos, reprehenderit delectus officia.</p>
+                    <p>
+                        <ul>
+                            <li>1. to create elements using JavaScript is : document.createElement("tagName")</li>
+                            <li>2.to add elements using JavaScript : using .appendChild('childName') to the parent .</li>
+                            <li>3. to remove elements using JavaScript: use .removeChild(childName) to the parent.</li>
+                        </ul>
+                    </p>
                 </div>
             </div>
          </section>

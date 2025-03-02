@@ -26,10 +26,15 @@ blogBtn.addEventListener('click', function () {
 
 // completed button 
 const completedBtns = document.querySelectorAll('.completed-btn');
+let countClick = 0;
 for (let btn of completedBtns) {
     btn.addEventListener('click', function (event) {
         // alert
         alert('Board Updated Successfully')
+        countClick++;
+        if(countClick === completedBtns.length){
+            alert('Congrats!!! You have completed all the current task.');
+        };
         // decreasing assigned task 
         let textAssigned = parseInt(document.getElementById('text-assigned').innerText);
         textAssigned -= 1;
@@ -42,27 +47,17 @@ for (let btn of completedBtns) {
         const title = btn.parentNode.parentNode.childNodes[3].innerText; //get title to activity log msg
         const activityToAdd = document.getElementById('activity-container');
         const msgP = document.createElement('p');
-        msgP.classList.add('my-3', 'p-4', 'text-center', 'text-lg', 'font-medium')
+        msgP.classList.add('my-3', 'mx-4', 'rounded-lg',  'p-4', 'bg-slate-100', 'text-center', 'text-lg', 'font-medium')
 
         // set time on the msg
-        const date = new Date();
-        let hours = date.getHours();
-        const minutes = date.getMinutes().toString().padStart(2, "0");
-        const seconds = date.getSeconds().toString().padStart(2, "0");
-        const amOrPm = hours >= 12 ? "PM" : "AM";
-        hours = hours % 12;
-        const currentTime = `${hours}:${minutes}:${seconds} ${amOrPm}`;
+        const dateNow = new Date();
+        const currentTime = dateNow.toLocaleTimeString();
         msgP.innerText = `You have completed the ${title} at ${currentTime}` //final msg of activity log
         activityToAdd.appendChild(msgP)
         // to disable clicked btn
         event.target.classList.add('opacity-50', 'cursor-not-allowed', 'pointer-events-none', 'bg-gray-300', 'text-black')
     })
 }
-// last completed btn alert
-document.getElementById('last-completed-btn')
-    .addEventListener('click', function () {
-        alert('Congrats!!! You have completed all the current tast.')
-    })
 
 // activity log clearing
 document.getElementById('clear')
@@ -80,7 +75,7 @@ let currentDate = document.getElementById('current-date');
     currentDate.innerText = current;
 
 
-// magic button to chande bg
+// magic button to change bg
 const magicBtn = document.getElementById('magic-btn')
 magicBtn.addEventListener('click', function(){
     const letterOfColor = '0123456789ABCDEF';
